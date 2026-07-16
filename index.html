@@ -1198,20 +1198,6 @@ async function gantiDatabase() {
             )
             .value;
 
-
-    const nama =
-        databaseAktif === "klinik"
-            ? "KLINIK PRATAMA ANDINI"
-            : "PT NATUS";
-
-
-    document
-        .getElementById(
-            "databaseTitle"
-        )
-        .innerText = nama;
-
-
     resetForm();
 
     await loadData();
