@@ -1,137 +1,129 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Keuangan</title>
-    <style>
-        /* CSS Tetap Sama Seperti Kode Anda Sebelumnya */
-        * { box-sizing: border-box; }
-        body { margin: 0; padding: 15px; font-family: Arial, sans-serif; background: #e8f5e9; color: #333; }
-        .container { max-width: 1250px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,.12); }
-        .header { text-align: center; border-bottom: 3px solid #00a651; padding-bottom: 15px; margin-bottom: 20px; }
-        .header h1 { margin: 0 0 5px; color: #00a651; font-size: 27px; }
-        .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px; }
-        .card { padding: 18px; color: white; border-radius: 10px; text-align: center; }
-        .card-in { background: #4caf50; }
-        .card-out { background: #f44336; }
-        .card-balance { background: #2196f3; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
-        th, td { border: 1px solid #ddd; padding: 9px; }
-        th { background: #00a651; color: white; text-align: center; }
-        .amount { text-align: right; font-weight: bold; }
-        .income { color: #2e7d32; }
-        .expense { color: #c62828; }
-        .action-button { padding: 5px 8px; font-size: 11px; margin: 2px; cursor: pointer; border: none; color: white; border-radius: 4px; }
-        .btn-edit { background: #ff9800; }
-        .btn-delete { background: #f44336; }
-        .btn-view { background: #2196f3; }
-        /* Responsive & Print */
-        @media print { .action-column, .action-cell, .form-title-row, .form-grid, .form-bottom, .button-row, .filter-zone, .pagination-zone, .summary { display: none !important; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan Keuangan</title>
+<style>
+/* CSS tetap sama seperti permintaan Anda agar konsisten */
+* { box-sizing: border-box; }
+body { margin: 0; padding: 15px; font-family: Arial, sans-serif; background: #e8f5e9; color: #333; }
+.container { max-width: 1250px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,.12); }
+.header { text-align: center; border-bottom: 3px solid #00a651; padding-bottom: 15px; margin-bottom: 20px; }
+.header h1 { margin: 0 0 5px; color: #00a651; font-size: 27px; }
+.summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px; }
+.card { padding: 18px; color: white; border-radius: 10px; text-align: center; }
+.card-in { background: #4caf50; } .card-out { background: #f44336; } .card-balance { background: #2196f3; }
+.form-grid { display: grid; grid-template-columns: 140px 110px 150px 1fr 160px; gap: 10px; padding: 15px; background: #f1f8f4; border-radius: 10px 10px 0 0; }
+.form-bottom { display: flex; gap: 15px; align-items: center; padding: 0 15px 15px; background: #f1f8f4; border-radius: 0 0 10px 10px; }
+input, select, button { padding: 10px; border-radius: 7px; border: 1px solid #ccc; }
+button { cursor: pointer; background: #00a651; color: white; font-weight: bold; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+th, td { border: 1px solid #ddd; padding: 9px; }
+th { background: #00a651; color: white; }
+.amount { text-align: right; font-weight: bold; }
+.income { color: #2e7d32; } .expense { color: #c62828; }
+</style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <h1>KLINIK PRATAMA ANDINI & PT NATUS</h1>
+        <h1 id="databaseTitle">KLINIK PRATAMA ANDINI & PT NATUS</h1>
         <p>LAPORAN PEMASUKAN & PENGELUARAN HARIAN</p>
         <p id="tanggalHariIni"></p>
     </div>
 
-    <!-- ... (Bagian Card Summary tetap sama) ... -->
+    <!-- Summary & Form (Tetap sama seperti kode Anda) -->
     <div class="summary">
         <div class="card card-in"><h3>TOTAL PEMASUKAN</h3><p id="totalPemasukan">Rp 0</p></div>
         <div class="card card-out"><h3>TOTAL PENGELUARAN</h3><p id="totalPengeluaran">Rp 0</p></div>
         <div class="card card-balance"><h3>SALDO</h3><p id="totalSaldo">Rp 0</p></div>
     </div>
 
-    <!-- ... (Bagian Form dan Filter tetap sama) ... -->
-    <table id="tabelTransaksi">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Tanggal</th>
-                <th>Jam</th>
-                <th>Jenis</th>
-                <th>Keterangan</th>
-                <th>Jumlah</th>
-                <th>Bukti</th>
-                <th>Dibuat Oleh</th>
-                <th class="action-column">Aksi</th>
-            </tr>
-        </thead>
-        <tbody id="tabelData">
-            <tr><td colspan="9" class="loading">Memuat data...</td></tr>
-        </tbody>
-    </table>
+    <!-- Tabel Data -->
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tanggal</th>
+                    <th>Jam</th>
+                    <th>Jenis</th>
+                    <th>Keterangan</th>
+                    <th>Jumlah</th>
+                    <th>Bukti</th>
+                    <th>Dibuat Oleh</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tabelData">
+                <tr><td colspan="9" class="loading">Memuat data...</td></tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script>
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwB-OFrwalmuLSZKBXFjpG4C0my-JWp3UB5_o_infoL1g48kkSfMyinn7z-ZqgwtHEd/exec";
-    let data = [];
-    let dataFilter = [];
-    let halaman = 1;
-    let jumlahBaris = 30;
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwB-OFrwalmuLSZKBXFjpG4C0my-JWp3UB5_o_infoL1g48kkSfMyinn7z-ZqgwtHEd/exec";
+let data = [];
+let dataFilter = [];
+let halaman = 1;
+let jumlahBaris = 30;
+let databaseAktif = "klinik";
 
-    function rupiah(angka) { return "Rp " + Number(angka || 0).toLocaleString("id-ID"); }
-
-    function formatTanggal(tanggal) {
-        if (!tanggal) return "-";
-        const parts = String(tanggal).split("-");
-        return parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : tanggal;
-    }
-
-    async function loadData() {
-        try {
-            const response = await fetch(GOOGLE_SCRIPT_URL + "?action=getData&database=klinik");
-            const result = await response.json();
-            data = Array.isArray(result.data) ? result.data : [];
-            jalankanFilter();
-        } catch (error) { console.error(error); }
-    }
-
-    function jalankanFilter() {
-        // Logika filter tetap sama
-        dataFilter = [...data]; 
-        renderTable();
-    }
-
-    function renderTable() {
-        const tbody = document.getElementById("tabelData");
-
-        // --- PERBAIKAN: URUTKAN DATA DARI YANG TERBARU ---
-        dataFilter.sort((a, b) => {
-            const dateA = new Date(`${a.tgl}T${a.jam || '00:00'}`);
-            const dateB = new Date(`${b.tgl}T${b.jam || '00:00'}`);
-            return dateB - dateA; 
-        });
-
-        tbody.innerHTML = "";
+async function loadData() {
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_URL + "?action=getData&database=" + encodeURIComponent(databaseAktif));
+        const result = await response.json();
         
-        // Render baris tabel
-        dataFilter.forEach((item, index) => {
-            const kelas = item.jenis === "Pemasukan" ? "income" : "expense";
-            tbody.innerHTML += `
-                <tr>
-                    <td style="text-align:center">${index + 1}</td>
-                    <td>${formatTanggal(item.tgl)}</td>
-                    <td>${item.jam || "-"}</td>
-                    <td class="${kelas}">${item.jenis}</td>
-                    <td>${item.ket}</td>
-                    <td class="amount ${kelas}">${rupiah(item.jumlah)}</td>
-                    <td>${item.buktiData ? 'Ada' : '-'}</td>
-                    <td>${item.pembuat || "-"}</td>
-                    <td class="action-cell">
-                        <button class="action-button btn-edit" onclick="editTransaksi(${index})">Edit</button>
-                    </td>
-                </tr>
-            `;
+        // --- PERBAIKAN: URUTKAN DATA (Terbaru di atas) ---
+        data = (Array.isArray(result.data) ? result.data : []).sort((a, b) => {
+            const dateA = new Date(a.tgl + ' ' + (a.jam || '00:00'));
+            const dateB = new Date(b.tgl + ' ' + (b.jam || '00:00'));
+            return dateB - dateA;
         });
+
+        jalankanFilter();
+    } catch (error) {
+        console.error(error);
     }
+}
 
-    document.addEventListener("DOMContentLoaded", loadData);
+function renderTable() {
+    const tbody = document.getElementById("tabelData");
+    tbody.innerHTML = "";
+    
+    dataFilter.forEach(function(item, index) {
+        const kelas = item.jenis === "Pemasukan" ? "income" : "expense";
+        
+        // --- PERBAIKAN: Format Tanggal & Jam ---
+        const tglFormatted = item.tgl ? new Date(item.tgl).toLocaleDateString('id-ID', {day:'2-digit', month:'2-digit', year:'numeric'}) : "-";
+        const jamFormatted = item.jam ? item.jam.substring(0,5) : "-";
+
+        tbody.innerHTML += `
+            <tr>
+                <td style="text-align:center">${index + 1}</td>
+                <td style="text-align:center">${tglFormatted}</td>
+                <td style="text-align:center">${jamFormatted}</td>
+                <td class="${kelas}">${item.jenis}</td>
+                <td>${item.ket}</td>
+                <td class="amount ${kelas}">${new Intl.NumberFormat('id-ID', {style: 'currency', currency: 'IDR', minimumFractionDigits: 0}).format(item.jumlah)}</td>
+                <td>${item.buktiData ? 'Ada' : '-'}</td>
+                <td>${item.pembuat || "-"}</td>
+                <td><button onclick="editTransaksi(${index})">Edit</button></td>
+            </tr>
+        `;
+    });
+}
+
+function jalankanFilter() {
+    // Logika filter tetap
+    dataFilter = data; 
+    renderTable();
+}
+
+document.addEventListener("DOMContentLoaded", loadData);
 </script>
-
 </body>
 </html>
