@@ -8,427 +8,399 @@
 <title>Laporan Keuangan</title>
 
 <style>
-
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 15px;
-    font-family: Arial, sans-serif;
-    background: #e8f5e9;
-    color: #333;
+    margin: 0;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    background: #e8f5e9;
+    color: #333;
 }
 
 .container {
-    max-width: 1250px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,.12);
+    max-width: 1250px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.12);
 }
 
-/* HEADER */
-
 .header {
-    text-align: center;
-    border-bottom: 3px solid #00a651;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #00a651;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .header h1 {
-    margin: 0 0 5px;
-    color: #00a651;
-    font-size: 27px;
+    margin: 0 0 5px;
+    color: #00a651;
+    font-size: 27px;
 }
 
 .header p {
-    margin: 5px 0;
-    color: #555;
+    margin: 5px 0;
+    color: #555;
 }
 
-/* SUMMARY */
-
 .summary {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
 .card {
-    padding: 18px;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
+    padding: 18px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .card h3 {
-    margin: 0 0 8px;
-    font-size: 14px;
+    margin: 0 0 8px;
+    font-size: 14px;
 }
 
 .card p {
-    margin: 0;
-    font-size: 22px;
-    font-weight: bold;
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .card-in {
-    background: #4caf50;
+    background: #4caf50;
 }
 
 .card-out {
-    background: #f44336;
+    background: #f44336;
 }
 
 .card-balance {
-    background: #2196f3;
+    background: #2196f3;
 }
 
-/* FORM TITLE */
-
 .form-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
 }
 
 .form-title-row h3 {
-    margin: 0;
+    margin: 0;
 }
 
 #databaseSelector {
-    min-width: 260px;
-    padding: 10px;
-    border: 2px solid #00a651;
-    border-radius: 8px;
-    font-weight: bold;
+    min-width: 260px;
+    padding: 10px;
+    border: 2px solid #00a651;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
-/* FORM */
-
 .form-grid {
-    display: grid;
-    grid-template-columns: 140px 110px 150px 1fr 160px;
-    gap: 10px;
-    padding: 15px;
-    background: #f1f8f4;
-    border-radius: 10px 10px 0 0;
+    display: grid;
+    grid-template-columns: 140px 110px 150px 1fr 160px;
+    gap: 10px;
+    padding: 15px;
+    background: #f1f8f4;
+    border-radius: 10px 10px 0 0;
 }
 
 .form-bottom {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    padding: 0 15px 15px;
-    background: #f1f8f4;
-    border-radius: 0 0 10px 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 0 15px 15px;
+    background: #f1f8f4;
+    border-radius: 0 0 10px 10px;
 }
 
 input,
 select,
 button {
-    padding: 10px;
-    border-radius: 7px;
-    border: 1px solid #ccc;
-    font-size: 13px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    font-size: 13px;
 }
 
 button {
-    border: none;
-    cursor: pointer;
-    background: #00a651;
-    color: white;
-    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background: #00a651;
+    color: white;
+    font-weight: bold;
 }
 
 button:hover {
-    opacity: .88;
+    opacity: .88;
 }
 
 button:disabled {
-    opacity: .6;
-    cursor: not-allowed;
+    opacity: .6;
+    cursor: not-allowed;
 }
 
 #btnSubmit {
-    min-width: 190px;
+    min-width: 190px;
 }
 
-/* BUTTONS */
-
 .button-row {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0 10px;
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 10px;
 }
 
 .button-row button {
-    flex: 1;
+    flex: 1;
 }
 
 .btn-blue {
-    background: #2196f3;
+    background: #2196f3;
 }
 
 .btn-gray {
-    background: #757575;
+    background: #757575;
 }
 
 .btn-orange {
-    background: #ff9800;
+    background: #ff9800;
 }
 
 .btn-red {
-    background: #f44336;
+    background: #f44336;
 }
 
-/* FILTER */
-
 .filter-zone {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    flex-wrap: wrap;
-    background: #e3f2fd;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
 }
 
 .filter-zone label {
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: bold;
+    font-size: 13px;
 }
 
-/* TABLE */
-
 .table-wrapper {
-    overflow-x: auto;
+    overflow-x: auto;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 13px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
 }
 
 th,
 td {
-    border: 1px solid #ddd;
-    padding: 9px;
+    border: 1px solid #ddd;
+    padding: 9px;
 }
 
 th {
-    background: #00a651;
-    color: white;
-    text-align: center;
-    white-space: nowrap;
+    background: #00a651;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
 }
 
 td.amount {
-    text-align: right;
-    font-weight: bold;
-    white-space: nowrap;
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .income {
-    color: #2e7d32;
+    color: #2e7d32;
 }
 
 .expense {
-    color: #c62828;
+    color: #c62828;
 }
 
 .action-button {
-    padding: 5px 8px;
-    font-size: 11px;
-    margin: 2px;
+    padding: 5px 8px;
+    font-size: 11px;
+    margin: 2px;
 }
 
 .btn-edit {
-    background: #ff9800;
+    background: #ff9800;
 }
 
 .btn-delete {
-    background: #f44336;
+    background: #f44336;
 }
 
 .btn-view {
-    background: #2196f3;
+    background: #2196f3;
 }
 
 tfoot td {
-    font-weight: bold;
+    font-weight: bold;
 }
 
 tfoot tr:nth-child(3) {
-    background: #e3f2fd;
+    background: #e3f2fd;
 }
 
-/* PAGINATION */
-
 .pagination-zone {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    margin-top: 15px;
-    background: #f5f5f5;
-    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-top: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
 }
 
 .pagination-controls {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* POPUP */
-
 .popup-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: rgba(0,0,0,.55);
-    justify-content: center;
-    align-items: center;
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,.55);
+    justify-content: center;
+    align-items: center;
 }
 
 .popup-box {
-    width: 420px;
-    max-width: 92%;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0,0,0,.3);
+    width: 420px;
+    max-width: 92%;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.3);
 }
 
 .popup-box h3 {
-    margin-top: 0;
-    text-align: center;
-    color: #00a651;
+    margin-top: 0;
+    text-align: center;
+    color: #00a651;
 }
 
 .popup-box label {
-    display: block;
-    margin: 15px 0 5px;
-    font-weight: bold;
-    font-size: 13px;
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 .popup-box input,
 .popup-box select {
-    width: 100%;
+    width: 100%;
 }
 
 .popup-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .popup-buttons button {
-    flex: 1;
+    flex: 1;
 }
-
-/* LOADING */
 
 .loading {
-    text-align: center;
-    padding: 30px;
-    color: #777;
+    text-align: center;
+    padding: 30px;
+    color: #777;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 850px) {
 
-    .summary {
-        grid-template-columns: 1fr;
-    }
+    .summary {
+        grid-template-columns: 1fr;
+    }
 
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
 
-    .form-bottom {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    .form-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-    .form-title-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    .form-title-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-    #databaseSelector {
-        width: 100%;
-    }
+    #databaseSelector {
+        width: 100%;
+    }
 
-    .button-row {
-        flex-direction: column;
-    }
+    .button-row {
+        flex-direction: column;
+    }
 
-    .pagination-zone {
-        flex-direction: column;
-    }
-
+    .pagination-zone {
+        flex-direction: column;
+    }
 }
-
-/* PRINT */
 
 @media print {
 
-    body {
-        padding: 0;
-        background: white;
-    }
+    body {
+        padding: 0;
+        background: white;
+    }
 
-    .container {
-        box-shadow: none;
-        max-width: 100%;
-        padding: 0;
-    }
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
 
-    .form-title-row,
-    .form-grid,
-    .form-bottom,
-    .button-row,
-    .filter-zone,
-    .pagination-zone,
-    .summary,
-    .action-column,
-    .action-cell {
-        display: none !important;
-    }
+    .form-title-row,
+    .form-grid,
+    .form-bottom,
+    .button-row,
+    .filter-zone,
+    .pagination-zone,
+    .summary,
+    .action-column,
+    .action-cell {
+        display: none !important;
+    }
 
-    .header h1 {
-        color: #000;
-    }
+    .header h1 {
+        color: #000;
+    }
 
-    table {
-        font-size: 11px;
-    }
+    table {
+        font-size: 11px;
+    }
 
-    th {
-        background: #00a651 !important;
-        color: white !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
+    th {
+        background: #00a651 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
 }
-
 </style>
 
 </head>
@@ -440,516 +412,409 @@ tfoot tr:nth-child(3) {
 ```
 <div class="header">
 
-    <h1 id="databaseTitle">
-        KLINIK PRATAMA ANDINI & PT NATUS
-    </h1>
+    <h1 id="databaseTitle">
+        KLINIK PRATAMA ANDINI & PT NATUS
+    </h1>
 
-    <p>
-        LAPORAN PEMASUKAN & PENGELUARAN HARIAN
-    </p>
+    <p>
+        LAPORAN PEMASUKAN & PENGELUARAN HARIAN
+    </p>
 
-    <p id="tanggalHariIni"></p>
+    <p id="tanggalHariIni"></p>
 
 </div>
-
 
 <div class="summary">
 
-    <div class="card card-in">
+    <div class="card card-in">
+        <h3>TOTAL PEMASUKAN</h3>
+        <p id="totalPemasukan">Rp 0</p>
+    </div>
 
-        <h3>
-            TOTAL PEMASUKAN
-        </h3>
+    <div class="card card-out">
+        <h3>TOTAL PENGELUARAN</h3>
+        <p id="totalPengeluaran">Rp 0</p>
+    </div>
 
-        <p id="totalPemasukan">
-            Rp 0
-        </p>
-
-    </div>
-
-
-    <div class="card card-out">
-
-        <h3>
-            TOTAL PENGELUARAN
-        </h3>
-
-        <p id="totalPengeluaran">
-            Rp 0
-        </p>
-
-    </div>
-
-
-    <div class="card card-balance">
-
-        <h3>
-            SALDO
-        </h3>
-
-        <p id="totalSaldo">
-            Rp 0
-        </p>
-
-    </div>
+    <div class="card card-balance">
+        <h3>SALDO</h3>
+        <p id="totalSaldo">Rp 0</p>
+    </div>
 
 </div>
-
 
 <div class="form-title-row">
 
-    <h3 id="formTitle">
-        Input Transaksi Baru
-    </h3>
+    <h3 id="formTitle">
+        Input Transaksi Baru
+    </h3>
 
+    <select id="databaseSelector" onchange="gantiDatabase()">
 
-    <select
-        id="databaseSelector"
-        onchange="gantiDatabase()"
-    >
+        <option value="klinik">
+            Klinik Pratama Andini
+        </option>
 
-        <option value="klinik">
-            Klinik Pratama Andini
-        </option>
+        <option value="natus">
+            PT NATUS
+        </option>
 
-        <option value="natus">
-            PT NATUS
-        </option>
-
-    </select>
+    </select>
 
 </div>
-
 
 <div class="form-grid">
 
-    <input
-        type="date"
-        id="tanggal"
-    >
+    <input type="date" id="tanggal">
 
-    <input
-        type="time"
-        id="jam"
-    >
+    <input type="time" id="jam">
 
-    <select id="jenis">
+    <select id="jenis">
 
-        <option value="">
-            Pilih Jenis
-        </option>
+        <option value="">
+            Pilih Jenis
+        </option>
 
-        <option value="Pemasukan">
-            Pemasukan
-        </option>
+        <option value="Pemasukan">
+            Pemasukan
+        </option>
 
-        <option value="Pengeluaran">
-            Pengeluaran
-        </option>
+        <option value="Pengeluaran">
+            Pengeluaran
+        </option>
 
-    </select>
+    </select>
 
+    <input
+        type="text"
+        id="keterangan"
+        placeholder="Keterangan transaksi..."
+    >
 
-    <input
-        type="text"
-        id="keterangan"
-        placeholder="Keterangan transaksi..."
-    >
-
-
-    <input
-        type="number"
-        id="jumlah"
-        placeholder="Jumlah Rp"
-    >
+    <input
+        type="number"
+        id="jumlah"
+        placeholder="Jumlah Rp"
+    >
 
 </div>
-
 
 <div class="form-bottom">
 
-    <div style="flex:2">
+    <div style="flex:2">
 
-        <label>
-            Upload Bukti:
-        </label>
+        <label>
+            Upload Bukti:
+        </label>
 
-        <input
-            type="file"
-            id="bukti"
-            accept=".jpg,.jpeg,.png,.pdf"
-        >
+        <input
+            type="file"
+            id="bukti"
+            accept=".jpg,.jpeg,.png,.pdf"
+        >
 
-        <span
-            id="namaFile"
-            style="
-                font-size:12px;
-                color:#777;
-            "
-        ></span>
+        <span
+            id="namaFile"
+            style="font-size:12px;color:#777;"
+        ></span>
 
-    </div>
+    </div>
 
+    <div
+        style="
+            flex:1.5;
+            display:flex;
+            gap:10px;
+            align-items:center;
+        "
+    >
 
-    <div
-        style="
-            flex:1.5;
-            display:flex;
-            gap:10px;
-            align-items:center;
-        "
-    >
+        <b>Dibuat oleh:</b>
 
-        <b>
-            Dibuat oleh:
-        </b>
+        <label>
+            <input
+                type="checkbox"
+                class="creator"
+                value="Wendy"
+                onclick="pilihCreator(this)"
+            >
+            Wendy
+        </label>
 
+        <label>
+            <input
+                type="checkbox"
+                class="creator"
+                value="Novi"
+                onclick="pilihCreator(this)"
+            >
+            Novi
+        </label>
 
-        <label>
+    </div>
 
-            <input
-                type="checkbox"
-                class="creator"
-                value="Wendy"
-                onclick="pilihCreator(this)"
-            >
-
-            Wendy
-
-        </label>
-
-
-        <label>
-
-            <input
-                type="checkbox"
-                class="creator"
-                value="Novi"
-                onclick="pilihCreator(this)"
-            >
-
-            Novi
-
-        </label>
-
-    </div>
-
-
-    <button
-        id="btnSubmit"
-        onclick="simpanTransaksi()"
-    >
-
-        + Simpan Transaksi
-
-    </button>
+    <button id="btnSubmit" onclick="simpanTransaksi()">
+        + Simpan Transaksi
+    </button>
 
 </div>
-
 
 <div class="button-row">
 
-    <button onclick="filterHariIni()">
-        📅 Data Hari Ini
-    </button>
+    <button onclick="filterHariIni()">
+        📅 Data Hari Ini
+    </button>
 
+    <button onclick="filterBulanIni()">
+        📆 Data Bulan Ini
+    </button>
 
-    <button onclick="filterBulanIni()">
-        📆 Data Bulan Ini
-    </button>
+    <button onclick="tampilkanSemua()">
+        📋 Semua Data
+    </button>
 
-
-    <button onclick="tampilkanSemua()">
-        📋 Semua Data
-    </button>
-
-
-    <button
-        class="btn-blue"
-        onclick="bukaPopupPrint()"
-    >
-        🖨️ Print PDF
-    </button>
+    <button
+        class="btn-blue"
+        onclick="bukaPopupPrint()"
+    >
+        🖨️ Print PDF
+    </button>
 
 </div>
-
 
 <div class="filter-zone">
 
-    <label>
-        Filter Jenis:
-    </label>
+    <label>Filter Jenis:</label>
 
+    <select
+        id="filterJenis"
+        onchange="jalankanFilter()"
+    >
 
-    <select
-        id="filterJenis"
-        onchange="jalankanFilter()"
-    >
+        <option value="Semua">
+            Semua Transaksi
+        </option>
 
-        <option value="Semua">
-            Semua Transaksi
-        </option>
+        <option value="Pemasukan">
+            Pemasukan
+        </option>
 
-        <option value="Pemasukan">
-            Pemasukan
-        </option>
+        <option value="Pengeluaran">
+            Pengeluaran
+        </option>
 
-        <option value="Pengeluaran">
-            Pengeluaran
-        </option>
+    </select>
 
-    </select>
+    <label>Filter Bulan:</label>
 
+    <input
+        type="month"
+        id="filterBulan"
+        onchange="jalankanFilter()"
+    >
 
-    <label>
-        Filter Bulan:
-    </label>
-
-
-    <input
-        type="month"
-        id="filterBulan"
-        onchange="jalankanFilter()"
-    >
-
-
-    <button
-        class="btn-gray"
-        onclick="resetFilter()"
-    >
-        Reset Filter
-    </button>
+    <button
+        class="btn-gray"
+        onclick="resetFilter()"
+    >
+        Reset Filter
+    </button>
 
 </div>
-
 
 <div class="table-wrapper">
 
-    <table>
+    <table>
 
-        <thead>
+        <thead>
 
-            <tr>
+            <tr>
 
-                <th>No</th>
+                <th>No</th>
+                <th>Tanggal</th>
+                <th>Jam</th>
+                <th>Jenis</th>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
+                <th>Bukti</th>
+                <th>Dibuat Oleh</th>
+                <th class="action-column">Aksi</th>
 
-                <th>Tanggal</th>
+            </tr>
 
-                <th>Jam</th>
+        </thead>
 
-                <th>Jenis</th>
+        <tbody id="tabelData">
 
-                <th>Keterangan</th>
+            <tr>
 
-                <th>Jumlah</th>
+                <td
+                    colspan="9"
+                    class="loading"
+                >
+                    Memuat data...
+                </td>
 
-                <th>Bukti</th>
+            </tr>
 
-                <th>Dibuat Oleh</th>
+        </tbody>
 
-                <th class="action-column">
-                    Aksi
-                </th>
+        <tfoot>
 
-            </tr>
+            <tr>
 
-        </thead>
+                <td
+                    colspan="5"
+                    style="text-align:right"
+                >
+                    TOTAL PEMASUKAN:
+                </td>
 
+                <td
+                    id="footerPemasukan"
+                    class="income"
+                >
+                    Rp 0
+                </td>
 
-        <tbody id="tabelData">
+                <td colspan="3"></td>
 
-            <tr>
+            </tr>
 
-                <td
-                    colspan="9"
-                    class="loading"
-                >
-                    Memuat data...
-                </td>
+            <tr>
 
-            </tr>
+                <td
+                    colspan="5"
+                    style="text-align:right"
+                >
+                    TOTAL PENGELUARAN:
+                </td>
 
-        </tbody>
+                <td
+                    id="footerPengeluaran"
+                    class="expense"
+                >
+                    Rp 0
+                </td>
 
+                <td colspan="3"></td>
 
-        <tfoot>
+            </tr>
 
-            <tr>
+            <tr>
 
-                <td
-                    colspan="5"
-                    style="text-align:right"
-                >
-                    TOTAL PEMASUKAN:
-                </td>
+                <td
+                    colspan="5"
+                    style="text-align:right"
+                >
+                    SALDO AKHIR:
+                </td>
 
-                <td
-                    id="footerPemasukan"
-                    class="income"
-                >
-                    Rp 0
-                </td>
+                <td id="footerSaldo">
+                    Rp 0
+                </td>
 
-                <td colspan="3"></td>
+                <td colspan="3"></td>
 
-            </tr>
+            </tr>
 
+        </tfoot>
 
-            <tr>
-
-                <td
-                    colspan="5"
-                    style="text-align:right"
-                >
-                    TOTAL PENGELUARAN:
-                </td>
-
-                <td
-                    id="footerPengeluaran"
-                    class="expense"
-                >
-                    Rp 0
-                </td>
-
-                <td colspan="3"></td>
-
-            </tr>
-
-
-            <tr>
-
-                <td
-                    colspan="5"
-                    style="text-align:right"
-                >
-                    SALDO AKHIR:
-                </td>
-
-                <td id="footerSaldo">
-                    Rp 0
-                </td>
-
-                <td colspan="3"></td>
-
-            </tr>
-
-        </tfoot>
-
-    </table>
+    </table>
 
 </div>
 
-
 <div class="pagination-zone">
 
-    <div id="infoPagination">
-        Menampilkan 0 data
-    </div>
+    <div id="infoPagination">
+        Menampilkan 0 data
+    </div>
 
+    <div class="pagination-controls">
 
-    <div class="pagination-controls">
+        <button onclick="halamanSebelumnya()">
+            ‹ Sebelumnya
+        </button>
 
-        <button onclick="halamanSebelumnya()">
-            ‹ Sebelumnya
-        </button>
+        <span id="nomorHalaman">
+            Halaman 1
+        </span>
 
+        <button onclick="halamanBerikutnya()">
+            Berikutnya ›
+        </button>
 
-        <span id="nomorHalaman">
-            Halaman 1
-        </span>
+        <select
+            id="jumlahBaris"
+            onchange="ubahJumlahBaris()"
+        >
 
+            <option value="30">
+                30 Baris
+            </option>
 
-        <button onclick="halamanBerikutnya()">
-            Berikutnya ›
-        </button>
+            <option value="all">
+                Semua Data
+            </option>
 
+        </select>
 
-        <select
-            id="jumlahBaris"
-            onchange="ubahJumlahBaris()"
-        >
-
-            <option value="30">
-                30 Baris
-            </option>
-
-            <option value="all">
-                Semua Data
-            </option>
-
-        </select>
-
-    </div>
+    </div>
 
 </div>
 ```
 
 </div>
 
-<div
-    id="popupPrint"
-    class="popup-overlay"
->
+<div id="popupPrint" class="popup-overlay">
 
 ```
 <div class="popup-box">
 
-    <h3>
-        🖨️ Filter Print PDF
-    </h3>
+    <h3>🖨️ Filter Print PDF</h3>
 
+    <label>Filter Bulan:</label>
 
-    <label>
-        Filter Bulan:
-    </label>
+    <input
+        type="month"
+        id="printBulan"
+    >
 
+    <label>Jenis Transaksi:</label>
 
-    <input
-        type="month"
-        id="printBulan"
-    >
+    <select id="printJenis">
 
+        <option value="Semua">
+            Semua Transaksi
+        </option>
 
-    <label>
-        Jenis Transaksi:
-    </label>
+        <option value="Pemasukan">
+            Pemasukan
+        </option>
 
+        <option value="Pengeluaran">
+            Pengeluaran
+        </option>
 
-    <select id="printJenis">
+    </select>
 
-        <option value="Semua">
-            Semua Transaksi
-        </option>
+    <div class="popup-buttons">
 
-        <option value="Pemasukan">
-            Pemasukan
-        </option>
+        <button
+            class="btn-gray"
+            onclick="tutupPopupPrint()"
+        >
+            Batal
+        </button>
 
-        <option value="Pengeluaran">
-            Pengeluaran
-        </option>
+        <button
+            class="btn-blue"
+            onclick="prosesPrint()"
+        >
+            🖨️ Cetak
+        </button>
 
-    </select>
-
-
-    <div class="popup-buttons">
-
-        <button
-            class="btn-gray"
-            onclick="tutupPopupPrint()"
-        >
-            Batal
-        </button>
-
-
-        <button
-            class="btn-blue"
-            onclick="prosesPrint()"
-        >
-            🖨️ Cetak
-        </button>
-
-    </div>
+    </div>
 
 </div>
 ```
@@ -958,17 +823,8 @@ tfoot tr:nth-child(3) {
 
 <script>
 
-/* =====================================================
-   GOOGLE APPS SCRIPT WEB APP
-===================================================== */
-
 const GOOGLE_SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbwB-OFrwalmuLSZKBXFjpG4C0my-JWp3UB5_o_infoL1g48kkSfMyinn7z-ZqgwtHEd/exec";
-
-
-/* =====================================================
-   KONFIGURASI DATABASE
-===================================================== */
 
 let databaseAktif = "klinik";
 
@@ -989,1623 +845,1672 @@ let buktiDataEdit = "";
 let namaBuktiEdit = "";
 
 
-/* =====================================================
-   FORMAT RUPIAH
-===================================================== */
+/* =========================
+   FORMAT RUPIAH
+========================= */
 
 function rupiah(angka) {
 
-    return "Rp " +
-        Number(angka || 0)
-        .toLocaleString("id-ID");
+    return "Rp " +
+        Number(angka || 0)
+        .toLocaleString("id-ID");
 
 }
 
 
-/* =====================================================
-   FORMAT TANGGAL
-===================================================== */
+/* =========================
+   FORMAT TANGGAL
+========================= */
 
 function formatTanggal(tanggal) {
 
-    if (!tanggal) return "-";
+    if (!tanggal) return "-";
 
-    const parts = String(tanggal).split("-");
+    const d = parseTanggal(tanggal);
 
-    if (parts.length !== 3) {
-        return tanggal;
-    }
+    if (isNaN(d.getTime())) {
+        return String(tanggal);
+    }
 
-    return parts[2] + "/" +
-           parts[1] + "/" +
-           parts[0];
+    return d.toLocaleDateString("id-ID", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+    });
 
 }
 
 
-/* =====================================================
-   INIT
-===================================================== */
+/* =========================
+   FORMAT JAM
+========================= */
+
+function formatJam(jam) {
+
+    if (!jam) return "-";
+
+    const nilai = String(jam).trim();
+
+    const match = nilai.match(
+        /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/
+    );
+
+    if (match) {
+
+        const hh = String(match[1]).padStart(2, "0");
+
+        const mm = String(match[2]).padStart(2, "0");
+
+        const ss = match[3]
+            ? ":" + String(match[3]).padStart(2, "0")
+            : "";
+
+        return `${hh}:${mm}${ss}`;
+
+    }
+
+    const d = new Date(nilai);
+
+    if (!isNaN(d.getTime())) {
+
+        return d.toLocaleTimeString("id-ID", {
+
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+
+        });
+
+    }
+
+    return nilai;
+
+}
+
+
+/* =========================
+   PARSE TANGGAL
+========================= */
+
+function parseTanggal(value) {
+
+    if (!value) {
+        return new Date(0);
+    }
+
+    const text = String(value).trim();
+
+    let match =
+        text.match(
+            /^(\d{4})-(\d{2})-(\d{2})/
+        );
+
+    if (match) {
+
+        return new Date(
+            Number(match[1]),
+            Number(match[2]) - 1,
+            Number(match[3])
+        );
+
+    }
+
+    match =
+        text.match(
+            /^(\d{2})\/(\d{2})\/(\d{4})/
+        );
+
+    if (match) {
+
+        return new Date(
+            Number(match[3]),
+            Number(match[2]) - 1,
+            Number(match[1])
+        );
+
+    }
+
+    const d = new Date(text);
+
+    return isNaN(d.getTime())
+        ? new Date(0)
+        : d;
+
+}
+
+
+/* =========================
+   GABUNG TANGGAL + JAM
+========================= */
+
+function getWaktuTransaksi(item) {
+
+    const tanggal =
+        String(item.tgl || "").trim();
+
+    const jam =
+        String(item.jam || "00:00:00").trim();
+
+    const tanggalObj =
+        parseTanggal(tanggal);
+
+    const match =
+        jam.match(
+            /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/
+        );
+
+    if (match) {
+
+        tanggalObj.setHours(
+            Number(match[1]) || 0,
+            Number(match[2]) || 0,
+            Number(match[3]) || 0,
+            0
+        );
+
+    }
+
+    return tanggalObj.getTime();
+
+}
+
+
+/* =========================
+   URUTKAN TERBARU
+========================= */
+
+function urutkanDataTerbaru() {
+
+    data.sort(function(a, b) {
+
+        return getWaktuTransaksi(b)
+             - getWaktuTransaksi(a);
+
+    });
+
+}
+
+
+/* =========================
+   INIT
+========================= */
 
 document.addEventListener(
-    "DOMContentLoaded",
-    function() {
+    "DOMContentLoaded",
+    function() {
 
-        setTanggalDanJam();
+        setTanggalDanJam();
 
-        document
-            .getElementById(
-                "tanggalHariIni"
-            )
-            .innerText =
-            new Date().toLocaleDateString(
-                "id-ID",
-                {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric"
-                }
-            );
+        document
+            .getElementById("tanggalHariIni")
+            .innerText =
+            new Date().toLocaleDateString(
+                "id-ID",
+                {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }
+            );
 
-        loadData();
+        loadData();
 
-    }
+    }
 );
 
 
-/* =====================================================
-   SET TANGGAL DAN JAM
-===================================================== */
+/* =========================
+   SET TANGGAL DAN JAM
+========================= */
 
 function setTanggalDanJam() {
 
-    const sekarang = new Date();
+    const sekarang = new Date();
 
-    const tanggal =
-        sekarang.toISOString().split("T")[0];
+    const tahun =
+        sekarang.getFullYear();
 
-    const jam =
-        String(sekarang.getHours())
-        .padStart(2, "0")
-        + ":" +
-        String(sekarang.getMinutes())
-        .padStart(2, "0");
+    const bulan =
+        String(
+            sekarang.getMonth() + 1
+        ).padStart(2, "0");
 
-    document
-        .getElementById("tanggal")
-        .value = tanggal;
+    const hari =
+        String(
+            sekarang.getDate()
+        ).padStart(2, "0");
 
-    document
-        .getElementById("jam")
-        .value = jam;
+    const jam =
+        String(
+            sekarang.getHours()
+        ).padStart(2, "0")
+        + ":"
+        + String(
+            sekarang.getMinutes()
+        ).padStart(2, "0");
+
+    document
+        .getElementById("tanggal")
+        .value =
+        `${tahun}-${bulan}-${hari}`;
+
+    document
+        .getElementById("jam")
+        .value =
+        jam;
 
 }
 
 
-/* =====================================================
-   LOAD DATA
-===================================================== */
+/* =========================
+   LOAD DATA
+========================= */
 
 async function loadData() {
 
-    const tabel =
-        document.getElementById(
-            "tabelData"
-        );
+    const tabel =
+        document.getElementById("tabelData");
 
-    tabel.innerHTML = `
+    tabel.innerHTML = `
 
-        <tr>
+        <tr>
 
-            <td
-                colspan="9"
-                class="loading"
-            >
+            <td
+                colspan="9"
+                class="loading"
+            >
 
-                Memuat data dari Google Spreadsheet...
+                Memuat data dari Google Spreadsheet...
 
-            </td>
+            </td>
 
-        </tr>
+        </tr>
 
-    `;
+    `;
 
+    try {
 
-    try {
+        const url =
+            GOOGLE_SCRIPT_URL
+            + "?action=getData&database="
+            + encodeURIComponent(
+                databaseAktif
+            );
 
-        const url =
-            GOOGLE_SCRIPT_URL
-            + "?action=getData&database="
-            + encodeURIComponent(
-                databaseAktif
-            );
+        const response =
+            await fetch(url);
 
+        const result =
+            await response.json();
 
-        const response =
-            await fetch(url);
+        if (!result.success) {
 
+            throw new Error(
+                result.message ||
+                "Gagal mengambil data"
+            );
 
-        const result =
-            await response.json();
+        }
 
+        data =
+            Array.isArray(result.data)
+                ? result.data
+                : [];
 
-        if (!result.success) {
+        // SORT TERBARU DI ATAS
+        urutkanDataTerbaru();
 
-            throw new Error(
-                result.message ||
-                "Gagal mengambil data"
-            );
+        halaman = 1;
 
-        }
+        jalankanFilter();
 
+    } catch (error) {
 
-        data =
-            Array.isArray(result.data)
-                ? result.data
-                : [];
+        console.error(error);
 
+        tabel.innerHTML = `
 
-        halaman = 1;
+            <tr>
 
-        jalankanFilter();
+                <td
+                    colspan="9"
+                    style="
+                        text-align:center;
+                        color:red;
+                        padding:30px;
+                    "
+                >
 
+                    Gagal mengambil data dari Google Spreadsheet.
 
-    } catch (error) {
+                    <br><br>
 
-        console.error(error);
+                    ${escapeHTML(error.message)}
 
-        tabel.innerHTML = `
+                </td>
 
-            <tr>
+            </tr>
 
-                <td
-                    colspan="9"
-                    style="
-                        text-align:center;
-                        color:red;
-                        padding:30px;
-                    "
-                >
+        `;
 
-                    Gagal mengambil data dari Google Spreadsheet.
-
-                    <br><br>
-
-                    ${escapeHTML(error.message)}
-
-                </td>
-
-            </tr>
-
-        `;
-
-    }
+    }
 
 }
 
 
-/* =====================================================
-   GANTI DATABASE
-===================================================== */
+/* =========================
+   GANTI DATABASE
+========================= */
 
 async function gantiDatabase() {
 
-    databaseAktif =
-        document
-            .getElementById(
-                "databaseSelector"
-            )
-            .value;
+    databaseAktif =
+        document
+            .getElementById(
+                "databaseSelector"
+            )
+            .value;
 
-    resetForm();
+    resetForm();
 
-    await loadData();
+    await loadData();
 
 }
 
 
-/* =====================================================
-   CREATOR
-===================================================== */
+/* =========================
+   CREATOR
+========================= */
 
 function pilihCreator(checkbox) {
 
-    document
-        .querySelectorAll(".creator")
-        .forEach(function(item) {
+    document
+        .querySelectorAll(".creator")
+        .forEach(function(item) {
 
-            if (item !== checkbox) {
+            if (item !== checkbox) {
 
-                item.checked = false;
+                item.checked = false;
 
-            }
+            }
 
-        });
+        });
 
 }
 
 
 function getCreator() {
 
-    const selected =
-        document.querySelector(
-            ".creator:checked"
-        );
+    const selected =
+        document.querySelector(
+            ".creator:checked"
+        );
 
-
-    return selected
-        ? selected.value
-        : "";
+    return selected
+        ? selected.value
+        : "";
 
 }
 
 
-/* =====================================================
-   SIMPAN / UPDATE
-===================================================== */
+/* =========================
+   SIMPAN / UPDATE
+========================= */
 
 async function simpanTransaksi() {
 
-    const tanggal =
-        document
-            .getElementById("tanggal")
-            .value;
+    const tanggal =
+        document
+            .getElementById("tanggal")
+            .value;
 
+    const jam =
+        document
+            .getElementById("jam")
+            .value;
 
-    const jam =
-        document
-            .getElementById("jam")
-            .value;
+    const jenis =
+        document
+            .getElementById("jenis")
+            .value;
 
+    const keterangan =
+        document
+            .getElementById("keterangan")
+            .value
+            .trim();
 
-    const jenis =
-        document
-            .getElementById("jenis")
-            .value;
+    const jumlah =
+        document
+            .getElementById("jumlah")
+            .value;
 
+    const pembuat =
+        getCreator();
 
-    const keterangan =
-        document
-            .getElementById("keterangan")
-            .value
-            .trim();
+    const fileInput =
+        document
+            .getElementById("bukti");
 
+    if (
+        !tanggal ||
+        !jam ||
+        !jenis ||
+        !keterangan ||
+        !jumlah ||
+        !pembuat
+    ) {
 
-    const jumlah =
-        document
-            .getElementById("jumlah")
-            .value;
+        alert(
+            "Mohon lengkapi semua data transaksi."
+        );
 
+        return;
 
-    const pembuat =
-        getCreator();
+    }
 
+    const btn =
+        document
+            .getElementById("btnSubmit");
 
-    const fileInput =
-        document
-            .getElementById("bukti");
+    btn.disabled = true;
 
+    btn.innerText = "Menyimpan...";
 
-    if (
-        !tanggal ||
-        !jam ||
-        !jenis ||
-        !keterangan ||
-        !jumlah ||
-        !pembuat
-    ) {
+    try {
 
-        alert(
-            "Mohon lengkapi semua data transaksi."
-        );
+        let buktiName =
+            namaBuktiEdit;
 
-        return;
+        let buktiData =
+            buktiDataEdit;
 
-    }
+        if (
+            fileInput.files.length > 0
+        ) {
 
+            const file =
+                fileInput.files[0];
 
-    const btn =
-        document
-            .getElementById(
-                "btnSubmit"
-            );
+            buktiName =
+                file.name;
 
+            buktiData =
+                await fileToBase64(
+                    file
+                );
 
-    btn.disabled = true;
+        }
 
-    btn.innerText = "Menyimpan...";
+        const transaksi = {
 
+            tgl: tanggal,
 
-    try {
+            jam: jam,
 
-        let buktiName =
-            namaBuktiEdit;
+            jenis: jenis,
 
+            ket: keterangan,
 
-        let buktiData =
-            buktiDataEdit;
+            jumlah: Number(jumlah),
 
+            buktiName: buktiName,
 
-        if (
-            fileInput.files.length > 0
-        ) {
+            buktiData: buktiData,
 
-            const file =
-                fileInput.files[0];
+            pembuat: pembuat
 
+        };
 
-            buktiName =
-                file.name;
+        const response =
+            await fetch(
+                GOOGLE_SCRIPT_URL,
+                {
+                    method: "POST",
 
+                    body: JSON.stringify({
 
-            buktiData =
-                await fileToBase64(
-                    file
-                );
+                        action:
+                            modeEdit
+                                ? "update"
+                                : "save",
 
-        }
+                        database:
+                            databaseAktif,
 
+                        id:
+                            modeEdit
+                                ? idEdit
+                                : null,
 
-        const transaksi = {
+                        data:
+                            transaksi
 
-            tgl: tanggal,
+                    })
 
-            jam: jam,
+                }
+            );
 
-            jenis: jenis,
+        const result =
+            await response.json();
 
-            ket: keterangan,
+        if (!result.success) {
 
-            jumlah: Number(jumlah),
+            throw new Error(
+                result.message ||
+                "Gagal menyimpan data"
+            );
 
-            buktiName: buktiName,
+        }
 
-            buktiData: buktiData,
+        alert(
+            modeEdit
+                ? "Data berhasil diperbarui."
+                : "Data berhasil disimpan."
+        );
 
-            pembuat: pembuat
+        resetForm();
 
-        };
+        await loadData();
 
+    } catch (error) {
 
-        const response =
-            await fetch(
-                GOOGLE_SCRIPT_URL,
-                {
-                    method: "POST",
+        alert(
+            "Gagal menyimpan data: "
+            + error.message
+        );
 
-                    body: JSON.stringify({
+    }
 
-                        action:
-                            modeEdit
-                                ? "update"
-                                : "save",
+    btn.disabled = false;
 
-                        database:
-                            databaseAktif,
-
-                        id:
-                            modeEdit
-                                ? idEdit
-                                : null,
-
-                        data:
-                            transaksi
-
-                    })
-
-                }
-            );
-
-
-        const result =
-            await response.json();
-
-
-        if (!result.success) {
-
-            throw new Error(
-                result.message ||
-                "Gagal menyimpan data"
-            );
-
-        }
-
-
-        alert(
-            modeEdit
-                ? "Data berhasil diperbarui."
-                : "Data berhasil disimpan."
-        );
-
-
-        resetForm();
-
-        await loadData();
-
-
-    } catch (error) {
-
-        alert(
-            "Gagal menyimpan data: "
-            + error.message
-        );
-
-    }
-
-
-    btn.disabled = false;
-
-    btn.innerText =
-        modeEdit
-            ? "💾 Perbarui Data"
-            : "+ Simpan Transaksi";
+    btn.innerText =
+        modeEdit
+            ? "💾 Perbarui Data"
+            : "+ Simpan Transaksi";
 
 }
 
 
-/* =====================================================
-   FILE BASE64
-===================================================== */
+/* =========================
+   FILE BASE64
+========================= */
 
 function fileToBase64(file) {
 
-    return new Promise(
-        function(resolve, reject) {
+    return new Promise(
+        function(resolve, reject) {
 
-            const reader =
-                new FileReader();
+            const reader =
+                new FileReader();
 
+            reader.onload =
+                function() {
 
-            reader.onload =
-                function() {
+                    resolve(
+                        reader.result
+                    );
 
-                    resolve(
-                        reader.result
-                    );
+                };
 
-                };
+            reader.onerror = reject;
 
+            reader.readAsDataURL(file);
 
-            reader.onerror = reject;
-
-
-            reader.readAsDataURL(file);
-
-        }
-    );
+        }
+    );
 
 }
 
 
-/* =====================================================
-   FILTER
-===================================================== */
+/* =========================
+   FILTER
+========================= */
 
 function jalankanFilter() {
 
-    const jenis =
-        document
-            .getElementById(
-                "filterJenis"
-            )
-            .value;
+    const jenis =
+        document
+            .getElementById(
+                "filterJenis"
+            )
+            .value;
 
+    const bulan =
+        document
+            .getElementById(
+                "filterBulan"
+            )
+            .value;
 
-    const bulan =
-        document
-            .getElementById(
-                "filterBulan"
-            )
-            .value;
+    dataFilter =
+        data.filter(function(item) {
 
+            const cocokJenis =
+                jenis === "Semua"
+                ||
+                item.jenis === jenis;
 
-    dataFilter =
-        data.filter(function(item) {
+            const cocokBulan =
+                !bulan
+                ||
+                String(item.tgl)
+                .startsWith(bulan);
 
-            const cocokJenis =
-                jenis === "Semua"
-                ||
-                item.jenis === jenis;
+            return cocokJenis &&
+                   cocokBulan;
 
+        });
 
-            const cocokBulan =
-                !bulan
-                ||
-                String(item.tgl)
-                .startsWith(bulan);
+    halaman = 1;
 
-
-            return cocokJenis &&
-                   cocokBulan;
-
-        });
-
-
-    halaman = 1;
-
-    renderTable();
+    renderTable();
 
 }
 
 
 function resetFilter() {
 
-    document
-        .getElementById(
-            "filterJenis"
-        )
-        .value = "Semua";
+    document
+        .getElementById(
+            "filterJenis"
+        )
+        .value = "Semua";
 
+    document
+        .getElementById(
+            "filterBulan"
+        )
+        .value = "";
 
-    document
-        .getElementById(
-            "filterBulan"
-        )
-        .value = "";
-
-
-    jalankanFilter();
+    jalankanFilter();
 
 }
 
 
 function tampilkanSemua() {
 
-    resetFilter();
+    resetFilter();
 
 }
 
 
 function filterHariIni() {
 
-    const hariIni =
-        new Date()
-        .toISOString()
-        .split("T")[0];
+    const sekarang =
+        new Date();
 
+    const hariIni =
+        sekarang.getFullYear()
+        + "-"
+        + String(
+            sekarang.getMonth() + 1
+        ).padStart(2, "0")
+        + "-"
+        + String(
+            sekarang.getDate()
+        ).padStart(2, "0");
 
-    dataFilter =
-        data.filter(function(item) {
+    dataFilter =
+        data.filter(function(item) {
 
-            return item.tgl === hariIni;
+            return String(item.tgl)
+                .startsWith(hariIni);
 
-        });
+        });
 
+    halaman = 1;
 
-    halaman = 1;
-
-    renderTable();
+    renderTable();
 
 }
 
 
 function filterBulanIni() {
 
-    const bulanIni =
-        new Date()
-        .toISOString()
-        .slice(0, 7);
+    const sekarang =
+        new Date();
 
+    const bulanIni =
+        sekarang.getFullYear()
+        + "-"
+        + String(
+            sekarang.getMonth() + 1
+        ).padStart(2, "0");
 
-    document
-        .getElementById(
-            "filterBulan"
-        )
-        .value = bulanIni;
+    document
+        .getElementById(
+            "filterBulan"
+        )
+        .value = bulanIni;
 
+    document
+        .getElementById(
+            "filterJenis"
+        )
+        .value = "Semua";
 
-    document
-        .getElementById(
-            "filterJenis"
-        )
-        .value = "Semua";
-
-
-    jalankanFilter();
+    jalankanFilter();
 
 }
 
 
-/* =====================================================
-   RENDER TABLE
-===================================================== */
+/* =========================
+   RENDER TABLE
+========================= */
 
 function renderTable() {
 
-    const tbody =
-        document
-            .getElementById(
-                "tabelData"
-            );
+    const tbody =
+        document
+            .getElementById(
+                "tabelData"
+            );
 
+    let totalIn = 0;
 
-    let totalIn = 0;
+    let totalOut = 0;
 
-    let totalOut = 0;
+    dataFilter.forEach(function(item) {
 
+        if (
+            item.jenis === "Pemasukan"
+        ) {
 
-    dataFilter.forEach(function(item) {
+            totalIn +=
+                Number(item.jumlah || 0);
 
-        if (
-            item.jenis === "Pemasukan"
-        ) {
+        } else {
 
-            totalIn +=
-                Number(item.jumlah || 0);
+            totalOut +=
+                Number(item.jumlah || 0);
 
-        } else {
+        }
 
-            totalOut +=
-                Number(item.jumlah || 0);
+    });
 
-        }
+    let dataTampil;
 
-    });
+    if (
+        jumlahBaris === "all"
+    ) {
 
+        dataTampil =
+            dataFilter;
 
-    let dataTampil;
+    } else {
 
+        const mulai =
+            (halaman - 1)
+            * jumlahBaris;
 
-    if (
-        jumlahBaris === "all"
-    ) {
+        dataTampil =
+            dataFilter.slice(
+                mulai,
+                mulai + jumlahBaris
+            );
 
-        dataTampil =
-            dataFilter;
+    }
 
-    } else {
+    tbody.innerHTML = "";
 
-        const mulai =
-            (halaman - 1)
-            * jumlahBaris;
+    if (
+        dataTampil.length === 0
+    ) {
 
+        tbody.innerHTML = `
 
-        dataTampil =
-            dataFilter.slice(
-                mulai,
-                mulai + jumlahBaris
-            );
+            <tr>
 
-    }
+                <td
+                    colspan="9"
+                    style="
+                        text-align:center;
+                        padding:30px;
+                    "
+                >
 
+                    Tidak ada data transaksi.
 
-    tbody.innerHTML = "";
+                </td>
 
+            </tr>
 
-    if (
-        dataTampil.length === 0
-    ) {
+        `;
 
-        tbody.innerHTML = `
+    }
 
-            <tr>
+    dataTampil.forEach(function(item) {
 
-                <td
-                    colspan="9"
-                    style="
-                        text-align:center;
-                        padding:30px;
-                    "
-                >
+        const index =
+            data.indexOf(item);
 
-                    Tidak ada data transaksi.
+        const kelas =
+            item.jenis === "Pemasukan"
+                ? "income"
+                : "expense";
 
-                </td>
+        let bukti = "-";
 
-            </tr>
+        if (
+            item.buktiData
+        ) {
 
-        `;
+            bukti = `
 
-    }
-
-
-    dataTampil.forEach(function(item) {
-
-        const index =
-            data.indexOf(item);
-
-
-        const kelas =
-            item.jenis === "Pemasukan"
-                ? "income"
-                : "expense";
-
-
-        let bukti = "-";
-
-
-        if (
-            item.buktiData
-        ) {
-
-            bukti = `
-
-                <button
-                    class="
-                        action-button
-                        btn-view
-                    "
-                    onclick="
-                        bukaBukti(${index})
-                    "
-                >
-
-                    👁️ Lihat
-
-                </button>
-
-            `;
-
-        } else if (
-            item.buktiName
-        ) {
-
-            bukti =
-                escapeHTML(
-                    item.buktiName
-                );
-
-        }
-
-
-        tbody.innerHTML += `
-
-            <tr>
-
-                <td
-                    style="text-align:center"
-                >
-                    ${index + 1}
-                </td>
-
-
-                <td>
-                    ${formatTanggal(item.tgl)}
-                </td>
-
-
-                <td>
-                    ${item.jam || "-"}
-                </td>
-
-
-                <td class="${kelas}">
-                    ${escapeHTML(item.jenis)}
-                </td>
-
-
-                <td>
-                    ${escapeHTML(item.ket)}
-                </td>
-
-
-                <td
-                    class="
-                        amount
-                        ${kelas}
-                    "
-                >
-                    ${rupiah(item.jumlah)}
-                </td>
-
-
-                <td>
-                    ${bukti}
-                </td>
-
-
-                <td>
-                    ${escapeHTML(item.pembuat || "-")}
-                </td>
-
-
-                <td class="action-cell">
-
-                    <button
-                        class="
-                            action-button
-                            btn-edit
-                        "
-                        onclick="
-                            editTransaksi(${index})
-                        "
-                    >
-                        ✏️ Edit
-                    </button>
-
-
-                    <button
-                        class="
-                            action-button
-                            btn-delete
-                        "
-                        onclick="
-                            hapusTransaksi(${index})
-                        "
-                    >
-                        🗑️ Hapus
-                    </button>
-
-                </td>
-
-            </tr>
-
-        `;
-
-    });
-
-
-    const saldo =
-        totalIn - totalOut;
-
-
-    document
-        .getElementById(
-            "totalPemasukan"
-        )
-        .innerText =
-        rupiah(totalIn);
-
-
-    document
-        .getElementById(
-            "totalPengeluaran"
-        )
-        .innerText =
-        rupiah(totalOut);
-
-
-    document
-        .getElementById(
-            "totalSaldo"
-        )
-        .innerText =
-        rupiah(saldo);
-
-
-    document
-        .getElementById(
-            "footerPemasukan"
-        )
-        .innerText =
-        rupiah(totalIn);
-
-
-    document
-        .getElementById(
-            "footerPengeluaran"
-        )
-        .innerText =
-        rupiah(totalOut);
-
-
-    document
-        .getElementById(
-            "footerSaldo"
-        )
-        .innerText =
-        rupiah(saldo);
-
-
-    const totalHalaman =
-        jumlahBaris === "all"
-            ? 1
-            : Math.ceil(
-                dataFilter.length /
-                jumlahBaris
-            );
-
-
-    document
-        .getElementById(
-            "infoPagination"
-        )
-        .innerText =
-        "Menampilkan "
-        + dataTampil.length
-        + " dari "
-        + dataFilter.length
-        + " data";
-
-
-    document
-        .getElementById(
-            "nomorHalaman"
-        )
-        .innerText =
-        jumlahBaris === "all"
-            ? "Semua Data"
-            : "Halaman "
-              + halaman
-              + " dari "
-              + (totalHalaman || 1);
+                <button
+                    class="
+                        action-button
+                        btn-view
+                    "
+                    onclick="
+                        bukaBukti(${index})
+                    "
+                >
+
+                    👁️ Lihat
+
+                </button>
+
+            `;
+
+        } else if (
+            item.buktiName
+        ) {
+
+            bukti =
+                escapeHTML(
+                    item.buktiName
+                );
+
+        }
+
+        tbody.innerHTML += `
+
+            <tr>
+
+                <td
+                    style="text-align:center"
+                >
+                    ${dataFilter.indexOf(item) + 1}
+                </td>
+
+                <td>
+                    ${formatTanggal(item.tgl)}
+                </td>
+
+                <td>
+                    ${formatJam(item.jam)}
+                </td>
+
+                <td class="${kelas}">
+                    ${escapeHTML(item.jenis)}
+                </td>
+
+                <td>
+                    ${escapeHTML(item.ket)}
+                </td>
+
+                <td
+                    class="
+                        amount
+                        ${kelas}
+                    "
+                >
+                    ${rupiah(item.jumlah)}
+                </td>
+
+                <td>
+                    ${bukti}
+                </td>
+
+                <td>
+                    ${escapeHTML(item.pembuat || "-")}
+                </td>
+
+                <td class="action-cell">
+
+                    <button
+                        class="
+                            action-button
+                            btn-edit
+                        "
+                        onclick="
+                            editTransaksi(${index})
+                        "
+                    >
+                        ✏️ Edit
+                    </button>
+
+                    <button
+                        class="
+                            action-button
+                            btn-delete
+                        "
+                        onclick="
+                            hapusTransaksi(${index})
+                        "
+                    >
+                        🗑️ Hapus
+                    </button>
+
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+    const saldo =
+        totalIn - totalOut;
+
+    document
+        .getElementById(
+            "totalPemasukan"
+        )
+        .innerText =
+        rupiah(totalIn);
+
+    document
+        .getElementById(
+            "totalPengeluaran"
+        )
+        .innerText =
+        rupiah(totalOut);
+
+    document
+        .getElementById(
+            "totalSaldo"
+        )
+        .innerText =
+        rupiah(saldo);
+
+    document
+        .getElementById(
+            "footerPemasukan"
+        )
+        .innerText =
+        rupiah(totalIn);
+
+    document
+        .getElementById(
+            "footerPengeluaran"
+        )
+        .innerText =
+        rupiah(totalOut);
+
+    document
+        .getElementById(
+            "footerSaldo"
+        )
+        .innerText =
+        rupiah(saldo);
+
+    const totalHalaman =
+        jumlahBaris === "all"
+            ? 1
+            : Math.ceil(
+                dataFilter.length /
+                jumlahBaris
+            );
+
+    document
+        .getElementById(
+            "infoPagination"
+        )
+        .innerText =
+        "Menampilkan "
+        + dataTampil.length
+        + " dari "
+        + dataFilter.length
+        + " data";
+
+    document
+        .getElementById(
+            "nomorHalaman"
+        )
+        .innerText =
+        jumlahBaris === "all"
+            ? "Semua Data"
+            : "Halaman "
+              + halaman
+              + " dari "
+              + (totalHalaman || 1);
 
 }
 
 
-/* =====================================================
-   PAGINATION
-===================================================== */
+/* =========================
+   PAGINATION
+========================= */
 
 function ubahJumlahBaris() {
 
-    const value =
-        document
-            .getElementById(
-                "jumlahBaris"
-            )
-            .value;
+    const value =
+        document
+            .getElementById(
+                "jumlahBaris"
+            )
+            .value;
 
+    jumlahBaris =
+        value === "all"
+            ? "all"
+            : Number(value);
 
-    jumlahBaris =
-        value === "all"
-            ? "all"
-            : Number(value);
+    halaman = 1;
 
-
-    halaman = 1;
-
-    renderTable();
+    renderTable();
 
 }
 
 
 function halamanSebelumnya() {
 
-    if (
-        halaman > 1
-    ) {
+    if (
+        halaman > 1
+    ) {
 
-        halaman--;
+        halaman--;
 
-        renderTable();
+        renderTable();
 
-    }
+    }
 
 }
 
 
 function halamanBerikutnya() {
 
-    if (
-        jumlahBaris === "all"
-    ) {
+    if (
+        jumlahBaris === "all"
+    ) {
 
-        return;
+        return;
 
-    }
+    }
 
+    const totalHalaman =
+        Math.ceil(
+            dataFilter.length /
+            jumlahBaris
+        );
 
-    const totalHalaman =
-        Math.ceil(
-            dataFilter.length /
-            jumlahBaris
-        );
+    if (
+        halaman < totalHalaman
+    ) {
 
+        halaman++;
 
-    if (
-        halaman < totalHalaman
-    ) {
+        renderTable();
 
-        halaman++;
-
-        renderTable();
-
-    }
+    }
 
 }
 
 
-/* =====================================================
-   EDIT
-===================================================== */
+/* =========================
+   EDIT
+========================= */
 
 function editTransaksi(index) {
 
-    const password =
-        prompt(
-            "Masukkan password untuk edit:"
-        );
+    const password =
+        prompt(
+            "Masukkan password untuk edit:"
+        );
 
+    if (
+        password !== "admin123"
+    ) {
 
-    if (
-        password !== "admin123"
-    ) {
+        alert("Password salah.");
 
-        alert("Password salah.");
+        return;
 
-        return;
+    }
 
-    }
+    const item =
+        data[index];
 
+    modeEdit = true;
 
-    const item =
-        data[index];
+    idEdit = item.id;
 
+    buktiDataEdit =
+        item.buktiData || "";
 
-    modeEdit = true;
+    namaBuktiEdit =
+        item.buktiName || "";
 
-    idEdit = item.id;
+    document
+        .getElementById(
+            "formTitle"
+        )
+        .innerText =
+        "Edit Transaksi";
 
-    buktiDataEdit =
-        item.buktiData || "";
+    document
+        .getElementById(
+            "tanggal"
+        )
+        .value =
+        String(item.tgl)
+        .substring(0, 10);
 
-    namaBuktiEdit =
-        item.buktiName || "";
+    document
+        .getElementById(
+            "jam"
+        )
+        .value =
+        String(item.jam || "")
+        .substring(0, 8);
 
+    document
+        .getElementById(
+            "jenis"
+        )
+        .value =
+        item.jenis;
 
-    document
-        .getElementById(
-            "formTitle"
-        )
-        .innerText =
-        "Edit Transaksi";
+    document
+        .getElementById(
+            "keterangan"
+        )
+        .value =
+        item.ket;
 
+    document
+        .getElementById(
+            "jumlah"
+        )
+        .value =
+        item.jumlah;
 
-    document
-        .getElementById(
-            "tanggal"
-        )
-        .value =
-        item.tgl;
+    document
+        .querySelectorAll(
+            ".creator"
+        )
+        .forEach(function(checkbox) {
 
+            checkbox.checked =
+                checkbox.value ===
+                item.pembuat;
 
-    document
-        .getElementById(
-            "jam"
-        )
-        .value =
-        item.jam;
+        });
 
+    document
+        .getElementById(
+            "namaFile"
+        )
+        .innerText =
+        item.buktiName
+            ? "File: " + item.buktiName
+            : "";
 
-    document
-        .getElementById(
-            "jenis"
-        )
-        .value =
-        item.jenis;
+    document
+        .getElementById(
+            "btnSubmit"
+        )
+        .innerText =
+        "💾 Perbarui Data";
 
+    window.scrollTo({
 
-    document
-        .getElementById(
-            "keterangan"
-        )
-        .value =
-        item.ket;
+        top: 0,
 
+        behavior: "smooth"
 
-    document
-        .getElementById(
-            "jumlah"
-        )
-        .value =
-        item.jumlah;
-
-
-    document
-        .querySelectorAll(
-            ".creator"
-        )
-        .forEach(function(checkbox) {
-
-            checkbox.checked =
-                checkbox.value ===
-                item.pembuat;
-
-        });
-
-
-    document
-        .getElementById(
-            "namaFile"
-        )
-        .innerText =
-        item.buktiName
-            ? "File: " + item.buktiName
-            : "";
-
-
-    document
-        .getElementById(
-            "btnSubmit"
-        )
-        .innerText =
-        "💾 Perbarui Data";
-
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
+    });
 
 }
 
 
-/* =====================================================
-   HAPUS
-===================================================== */
+/* =========================
+   HAPUS
+========================= */
 
 async function hapusTransaksi(index) {
 
-    const password =
-        prompt(
-            "Masukkan password untuk menghapus:"
-        );
+    const password =
+        prompt(
+            "Masukkan password untuk menghapus:"
+        );
 
+    if (
+        password !== "admin123"
+    ) {
 
-    if (
-        password !== "admin123"
-    ) {
+        alert("Password salah.");
 
-        alert("Password salah.");
+        return;
 
-        return;
+    }
 
-    }
+    if (
+        !confirm(
+            "Yakin ingin menghapus transaksi ini?"
+        )
+    ) {
 
+        return;
 
-    if (
-        !confirm(
-            "Yakin ingin menghapus transaksi ini?"
-        )
-    ) {
+    }
 
-        return;
+    try {
 
-    }
+        const response =
+            await fetch(
+                GOOGLE_SCRIPT_URL,
+                {
+                    method: "POST",
 
+                    body: JSON.stringify({
 
-    try {
+                        action: "delete",
 
-        const response =
-            await fetch(
-                GOOGLE_SCRIPT_URL,
-                {
-                    method: "POST",
+                        database:
+                            databaseAktif,
 
-                    body: JSON.stringify({
+                        id:
+                            data[index].id
 
-                        action: "delete",
+                    })
 
-                        database:
-                            databaseAktif,
+                }
+            );
 
-                        id:
-                            data[index].id
+        const result =
+            await response.json();
 
-                    })
+        if (
+            !result.success
+        ) {
 
-                }
-            );
+            throw new Error(
+                result.message
+            );
 
+        }
 
-        const result =
-            await response.json();
+        alert(
+            "Data berhasil dihapus."
+        );
 
+        await loadData();
 
-        if (
-            !result.success
-        ) {
+    } catch (error) {
 
-            throw new Error(
-                result.message
-            );
+        alert(
+            "Gagal menghapus data: "
+            + error.message
+        );
 
-        }
-
-
-        alert(
-            "Data berhasil dihapus."
-        );
-
-
-        await loadData();
-
-
-    } catch (error) {
-
-        alert(
-            "Gagal menghapus data: "
-            + error.message
-        );
-
-    }
+    }
 
 }
 
 
-/* =====================================================
-   RESET FORM
-===================================================== */
+/* =========================
+   RESET FORM
+========================= */
 
 function resetForm() {
 
-    modeEdit = false;
+    modeEdit = false;
 
-    idEdit = null;
+    idEdit = null;
 
-    buktiDataEdit = "";
+    buktiDataEdit = "";
 
-    namaBuktiEdit = "";
+    namaBuktiEdit = "";
 
+    document
+        .getElementById(
+            "formTitle"
+        )
+        .innerText =
+        "Input Transaksi Baru";
 
-    document
-        .getElementById(
-            "formTitle"
-        )
-        .innerText =
-        "Input Transaksi Baru";
+    document
+        .getElementById(
+            "jenis"
+        )
+        .value = "";
 
+    document
+        .getElementById(
+            "keterangan"
+        )
+        .value = "";
 
-    document
-        .getElementById(
-            "jenis"
-        )
-        .value = "";
+    document
+        .getElementById(
+            "jumlah"
+        )
+        .value = "";
 
+    document
+        .getElementById(
+            "bukti"
+        )
+        .value = "";
 
-    document
-        .getElementById(
-            "keterangan"
-        )
-        .value = "";
+    document
+        .getElementById(
+            "namaFile"
+        )
+        .innerText = "";
 
+    document
+        .querySelectorAll(
+            ".creator"
+        )
+        .forEach(function(checkbox) {
 
-    document
-        .getElementById(
-            "jumlah"
-        )
-        .value = "";
+            checkbox.checked = false;
 
+        });
 
-    document
-        .getElementById(
-            "bukti"
-        )
-        .value = "";
+    document
+        .getElementById(
+            "btnSubmit"
+        )
+        .innerText =
+        "+ Simpan Transaksi";
 
-
-    document
-        .getElementById(
-            "namaFile"
-        )
-        .innerText = "";
-
-
-    document
-        .querySelectorAll(
-            ".creator"
-        )
-        .forEach(function(checkbox) {
-
-            checkbox.checked = false;
-
-        });
-
-
-    document
-        .getElementById(
-            "btnSubmit"
-        )
-        .innerText =
-        "+ Simpan Transaksi";
-
-
-    setTanggalDanJam();
+    setTanggalDanJam();
 
 }
 
 
-/* =====================================================
-   BUKA BUKTI
-===================================================== */
+/* =========================
+   BUKA BUKTI
+========================= */
 
 function bukaBukti(index) {
 
-    const item =
-        data[index];
+    const item =
+        data[index];
 
+    if (
+        !item.buktiData
+    ) {
 
-    if (
-        !item.buktiData
-    ) {
+        alert(
+            "Data bukti tidak tersedia."
+        );
 
-        alert(
-            "Data bukti tidak tersedia."
-        );
+        return;
 
-        return;
+    }
 
-    }
+    const win =
+        window.open();
 
+    win.document.write(`
 
-    const win =
-        window.open();
+        <html>
 
+            <head>
 
-    win.document.write(`
+                <title>
+                    Bukti Transaksi
+                </title>
 
-        <html>
+            </head>
 
-            <head>
+            <body
+                style="
+                    margin:0;
+                    text-align:center;
+                    background:#222;
+                "
+            >
 
-                <title>
-                    Bukti Transaksi
-                </title>
+                ${
+                    item.buktiData
+                    .startsWith(
+                        "data:application/pdf"
+                    )
 
-            </head>
+                    ?
 
+                    `
 
-            <body
-                style="
-                    margin:0;
-                    text-align:center;
-                    background:#222;
-                "
-            >
+                        <iframe
+                            src="${item.buktiData}"
+                            style="
+                                width:100vw;
+                                height:100vh;
+                                border:0;
+                            "
+                        ></iframe>
 
-                ${
-                    item.buktiData
-                    .startsWith(
-                        "data:application/pdf"
-                    )
+                    `
 
-                    ?
+                    :
 
-                    `
+                    `
 
-                        <iframe
-                            src="${item.buktiData}"
-                            style="
-                                width:100vw;
-                                height:100vh;
-                                border:0;
-                            "
-                        ></iframe>
+                        <img
+                            src="${item.buktiData}"
+                            style="
+                                max-width:100%;
+                                max-height:100vh;
+                            "
+                        >
 
-                    `
+                    `
 
-                    :
+                }
 
-                    `
+            </body>
 
-                        <img
-                            src="${item.buktiData}"
-                            style="
-                                max-width:100%;
-                                max-height:100vh;
-                            "
-                        >
+        </html>
 
-                    `
-
-                }
-
-            </body>
-
-        </html>
-
-    `);
+    `);
 
 }
 
 
-/* =====================================================
-   POPUP PRINT
-===================================================== */
+/* =========================
+   POPUP PRINT
+========================= */
 
 function bukaPopupPrint() {
 
-    document
-        .getElementById(
-            "printBulan"
-        )
-        .value =
-        document
-            .getElementById(
-                "filterBulan"
-            )
-            .value;
+    document
+        .getElementById(
+            "printBulan"
+        )
+        .value =
+        document
+            .getElementById(
+                "filterBulan"
+            )
+            .value;
 
+    document
+        .getElementById(
+            "printJenis"
+        )
+        .value =
+        document
+            .getElementById(
+                "filterJenis"
+            )
+            .value;
 
-    document
-        .getElementById(
-            "printJenis"
-        )
-        .value =
-        document
-            .getElementById(
-                "filterJenis"
-            )
-            .value;
-
-
-    document
-        .getElementById(
-            "popupPrint"
-        )
-        .style
-        .display =
-        "flex";
+    document
+        .getElementById(
+            "popupPrint"
+        )
+        .style
+        .display =
+        "flex";
 
 }
 
 
 function tutupPopupPrint() {
 
-    document
-        .getElementById(
-            "popupPrint"
-        )
-        .style
-        .display =
-        "none";
+    document
+        .getElementById(
+            "popupPrint"
+        )
+        .style
+        .display =
+        "none";
 
 }
 
 
-/* =====================================================
-   PRINT PDF
-===================================================== */
+/* =========================
+   PRINT PDF
+========================= */
 
 function prosesPrint() {
 
-    const bulan =
-        document
-            .getElementById(
-                "printBulan"
-            )
-            .value;
+    const bulan =
+        document
+            .getElementById(
+                "printBulan"
+            )
+            .value;
 
+    const jenis =
+        document
+            .getElementById(
+                "printJenis"
+            )
+            .value;
 
-    const jenis =
-        document
-            .getElementById(
-                "printJenis"
-            )
-            .value;
+    const dataPrint =
+        data.filter(function(item) {
 
+            const cocokJenis =
+                jenis === "Semua"
+                ||
+                item.jenis === jenis;
 
-    const dataPrint =
-        data.filter(function(item) {
+            const cocokBulan =
+                !bulan
+                ||
+                String(item.tgl)
+                .startsWith(bulan);
 
-            const cocokJenis =
-                jenis === "Semua"
-                ||
-                item.jenis === jenis;
+            return cocokJenis &&
+                   cocokBulan;
 
+        });
 
-            const cocokBulan =
-                !bulan
-                ||
-                String(item.tgl)
-                .startsWith(bulan);
+    if (
+        dataPrint.length === 0
+    ) {
 
+        alert(
+            "Tidak ada data sesuai filter."
+        );
 
-            return cocokJenis &&
-                   cocokBulan;
+        return;
 
-        });
+    }
 
+    const dataLama =
+        data;
 
-    if (
-        dataPrint.length === 0
-    ) {
+    const dataFilterLama =
+        dataFilter;
 
-        alert(
-            "Tidak ada data sesuai filter."
-        );
+    const jumlahLama =
+        jumlahBaris;
 
-        return;
+    const halamanLama =
+        halaman;
 
-    }
+    data = dataPrint;
 
+    dataFilter = dataPrint;
 
-    const dataLama =
-        data;
+    jumlahBaris = "all";
 
+    halaman = 1;
 
-    const dataFilterLama =
-        dataFilter;
+    renderTable();
 
+    tutupPopupPrint();
 
-    const jumlahLama =
-        jumlahBaris;
+    setTimeout(function() {
 
+        window.print();
 
-    const halamanLama =
-        halaman;
+        setTimeout(function() {
 
+            data = dataLama;
 
-    data = dataPrint;
+            dataFilter =
+                dataFilterLama;
 
-    dataFilter = dataPrint;
+            jumlahBaris =
+                jumlahLama;
 
-    jumlahBaris = "all";
+            halaman =
+                halamanLama;
 
-    halaman = 1;
+            renderTable();
 
+        }, 700);
 
-    renderTable();
-
-    tutupPopupPrint();
-
-
-    setTimeout(function() {
-
-        window.print();
-
-
-        setTimeout(function() {
-
-            data = dataLama;
-
-            dataFilter =
-                dataFilterLama;
-
-            jumlahBaris =
-                jumlahLama;
-
-            halaman =
-                halamanLama;
-
-
-            renderTable();
-
-        }, 700);
-
-    }, 300);
+    }, 300);
 
 }
 
 
-/* =====================================================
-   ESCAPE HTML
-===================================================== */
+/* =========================
+   ESCAPE HTML
+========================= */
 
 function escapeHTML(text) {
 
-    const div =
-        document.createElement(
-            "div"
-        );
+    const div =
+        document.createElement(
+            "div"
+        );
 
+    div.innerText =
+        text || "";
 
-    div.innerText =
-        text || "";
-
-
-    return div.innerHTML;
+    return div.innerHTML;
 
 }
 
 
-/* =====================================================
-   CLOSE POPUP
-===================================================== */
+/* =========================
+   CLOSE POPUP
+========================= */
 
 document
-    .getElementById(
-        "popupPrint"
-    )
-    .addEventListener(
-        "click",
-        function(event) {
+    .getElementById(
+        "popupPrint"
+    )
+    .addEventListener(
+        "click",
+        function(event) {
 
-            if (
-                event.target === this
-            ) {
+            if (
+                event.target === this
+            ) {
 
-                tutupPopupPrint();
+                tutupPopupPrint();
 
-            }
+            }
 
-        }
-    );
+        }
+    );
 
 </script>
 
